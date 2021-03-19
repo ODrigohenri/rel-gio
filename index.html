@@ -3,56 +3,75 @@
 <html lang="pt-br">
   <head>
     <link rel="stylesheet" type="text/css" href="C:\Users\ct0036\Desktop\Curso JS\exercicio01\style.css">
-    <title>Hora do Dia</title>
+    <title>Relogio</title>
     <style type="text/css">
-    body{
-  background: rgb(70,142,216);
-  font: normal 15pt Arial 
+    
+body{
+   background: rgb(70,142,216);
+   font: normal 25pt Montserrat;
+   display:inline-flexbox;
+   margin-top: 100px;
 }
 
 header{
   color: white;
-  text-align: center
+  text-align: center;
+  font: normal 15pt Montserrat;
 }
 
 section{
-  background: white;
-  border-radius: 10px;
-  padding: 15px;
-  width: 500px;
-  margin: auto;
-  box-shadow: 5px 5px 10px black;
   text-align:center;
+  background: white;
+  padding: 8px;
+  width:270px;
+  height: 270px;
+  border-radius: 25px;
+  margin: auto;
 }
 
 footer{
   color: white;
   text-align: center;
   font-style: italic;
+  font: normal 13pt Montserrat;
 }
 
 #imagem{
   border-radius: 100%;
-  width:50%;
-  height: 50%;
+  width:160px;
+  height: 160px;
+  margin: -30px 20px;
 }
+
+#msg{
+  background: black;
+  color: white;
+  width: 250px;
+  height: 40px;
+  margin: 10px auto;
+  border-radius: 20px;
+  padding: 5px;
+  font: normal 20pt Montserrat;
+
+}
+
     </style>
     <meta charset="utf-8">
   </head>
   <body onload = "carregar()">
     <header>
-      <h1>Hora do Dia</h1>
+      <h1>Relógio</h1>
     </header>
     <section>
       <div id="msg">
        Aqui vai aperecer a mensagem...
-      </div>
+      </div><br>
       <div id="foto">
         <img id="imagem" src="https://cdn.pixabay.com/photo/2018/04/30/15/26/nature-3362956_960_720.jpg" alt="foto do dia">
       </div>
     </section>
     <footer>
-      <p>&copy; Curso em Vídeo</p>
+      <p>&copy; Rodrigo Moreira</p>
     </footer>
     <script type="text/javascript">
     function carregar() {
@@ -60,7 +79,9 @@ var msg = window.document.getElementById('msg')
 var img = window.document.getElementById('imagem')
 var data = new Date()
 var hora = data.getHours()
-msg.innerHTML = 'Agora são ' + hora + ' horas';
+var minutos = data.getMinutes()
+var segundos = data.getSeconds()
+msg.innerHTML = hora + ":" + minutos + ":" + segundos;
   if (hora >= 0 && hora < 12) {
     document.body.style.background = "#eda14c"
     img.src = "https://cdn.pixabay.com/photo/2018/04/30/15/26/nature-3362956_960_720.jpg"
@@ -71,6 +92,7 @@ msg.innerHTML = 'Agora são ' + hora + ' horas';
     document.body.style.background = "#4a485f"
     img.src = "https://cdn.pixabay.com/photo/2020/07/27/14/34/forest-5442598_960_720.jpg"
   }
+  setTimeout('carregar()',500);
 }
     </script>
   </body>
