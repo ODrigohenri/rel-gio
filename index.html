@@ -1,79 +1,85 @@
 
-  <!DOCTYPE html>
-  <html lang="pt-br">
-    <head>
-      <title>Relogio Digital</title>
-      <style type="text/css">
-       header{
-         color: white;
-         text-align: center;
-         font: normal 15pt Arial;
-       }
-       footer{
-         color: white;
+   <!DOCTYPE html>
+   <html lang="pt-br">
+     <head>
+       <title>Relogio Digital com Foto</title>
+       <style type="text/css">
+        header{
+          color: white;
           text-align: center;
-          font: normal 20pt Arial;
+          font: normal 15pt Arial;
           width: 100%;
-          bottom: 0;
-          position: fixed;  
-       }
-       #msg{
-         color: white;
-         text-align:center;
-         font: normal 50pt Arial Black;
-         width: 100%;
-       }
-      </style>
-      <meta charset="utf-8">
-    </head>
-    <body onload = "carregar()">
-      <header>
-        <h1>Agora são exatamente:</h1>
-      </header>
-      <section>
-        <div id="msg">
-         Aqui vai aperecer a mensagem...
-        </div><br>
-      </section>
-      <footer>
-        <p>&copy; RodrigoMoreira</p>
-      </footer>
-      <script type="text/javascript">
-    function carregar() {
-         
-   var msg = window.document.getElementById('msg')
-   var img = window.document.getElementById('imagem')
-   var data = new Date()
-   var hora = data.getHours()
-   var minutos = data.getMinutes()
-   var segundos = data.getSeconds()
-  
-   msg.innerHTML = hora.toString().padStart(2, '0') + ":" + minutos.toString().padStart(2, '0') + ":" + segundos.toString().padStart(2, '0');
-    if(hora >= 0 && hora < 12) {
-       document.body.style.background = "url(https://cdn.pixabay.com/photo/2018/04/30/15/26/nature-3362956_960_720.jpg)";
-       document.body.style.backgroundSize = "cover";
-       document.body.style.backgroundRepeat = "no-repeat";
-       document.body.style.width =  "100vw";
-       document.body.style.height =  "100vh";
-       document.body.style.margin =  "0 auto";     
-    }else if (hora >= 12 && hora < 18) {
-       document.body.style.backgroundImage = "url(https://cdn.pixabay.com/photo/2013/04/04/12/34/mountains-100367_960_720.jpg)";
-       document.body.style.backgroundSize = "cover";
-       document.body.style.backgroundRepeat = "no-repeat";
-       document.body.style.width =  "100vw";
-       document.body.style.height =  "100vh";
-       document.body.style.margin =  "0 auto";     
-    }else{
-       document.body.style.background = "url(https://www.prefeitura.sp.gov.br/cidade/secretarias/upload/estrelas.jpg)";
-       document.body.style.backgroundSize = "cover";
-       document.body.style.backgroundRepeat = "no-repeat";
-       document.body.style.width =  "100vw";
-       document.body.style.height =  "100vh";
-       document.body.style.margin =  "0 auto";     
-    }
-    setTimeout('carregar()',500);
-  }
-      </script>
-    </body>
-    <script type="text/javascript" src="C:\Users\ct0036\Desktop\Curso JS\exercicio01\script.js"></script>
-  </html>
+          position:fixed;
+          top: 0px;  
+        }
+        footer{
+          color: white;
+          text-align: center;
+          font: normal 15pt Arial;
+          width: 100%;
+          position:fixed;
+          bottom: 0px;                 
+        }
+        #msg{
+          color: white;
+          text-align:center;
+          font: normal 50pt Arial Black;
+          width: 100%;
+          position:fixed;
+          top: 25%;  
+        }
+       </style>
+       <meta charset="utf-8">
+     </head>
+     <body onload = "carregar()">
+       <header>
+         <h1>Agora são exatamente:</h1>
+       </header>
+       <section>
+         <div id="msg">
+          Aqui vai aperecer a mensagem...
+         </div><br>
+       </section>
+       <footer>
+         <p>&copy; RodrigoMoreira</p>
+       </footer>
+       <script type="text/javascript">
+     function carregar() {
+          
+    var msg = window.document.getElementById('msg')
+    var img = window.document.getElementById('imagem')
+    var data = new Date()
+    var hora = data.getHours()
+    var minutos = data.getMinutes()
+    var segundos = data.getSeconds()
+   
+    msg.innerHTML = hora.toString().padStart(2, '0') + ":" + minutos.toString().padStart(2, '0') + ":" + segundos.toString().padStart(2, '0');
+     if(hora >= 0 && hora < 12) {
+        document.body.style.background = "url(https://cdn.pixabay.com/photo/2018/04/30/15/26/nature-3362956_960_720.jpg)";
+        document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.body.style.width =  "100vw";
+        document.body.style.height =  "100vh";
+        document.body.style.margin =  "0 auto";     
+     }else if (hora >= 12 && hora < 18) {
+        document.body.style.backgroundImage = "url(https://cdn.pixabay.com/photo/2013/04/04/12/34/mountains-100367_960_720.jpg)";
+        document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.body.style.width =  "100vw";
+        document.body.style.height =  "100vh";
+        document.body.style.margin =  "0 auto";     
+     }else{
+        document.body.style.background = "url(https://www.prefeitura.sp.gov.br/cidade/secretarias/upload/estrelas.jpg)";
+        document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.body.style.width =  "100vw";
+        document.body.style.height =  "100vh";
+        document.body.style.margin =  "0 auto";     
+     }
+     setTimeout('carregar()',500);
+   }
+       </script>
+     </body>
+     <script type="text/javascript" src="C:\Users\ct0036\Desktop\Curso JS\exercicio01\script.js"></script>
+   </html>
+ 
