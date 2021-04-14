@@ -1,0 +1,24 @@
+header{
+    color: white;
+    text-align: center;
+    font: normal 15pt Arial;
+    width: 100%;
+    position:fixed;
+    top: 0px;  
+  }
+  footer{
+    color: white;
+    text-align: center;
+    font: normal 15pt Arial;
+    width: 100%;
+    position:fixed;
+    bottom: 0px;                 
+  }
+  #msg{
+    color: white;
+    text-align:center;
+    font: normal 50pt Arial Black;
+    width: 100%;
+    position:fixed;
+    top: 25%;  
+  }
